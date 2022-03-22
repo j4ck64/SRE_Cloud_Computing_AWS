@@ -66,4 +66,6 @@ Stores file.pem (in .ssh folder) to access public cloud
 -- Creates aws file.pem as SSH key
 -- Important, key is not shared with non-authorised parties
 - We need to create a virtual machine on the cloud - ec2 (elastic compute service)
--- Virtual machine similar to hardware - requires specific components
+-- Virtual machine similar to hardware - requires specific components!
+AWS Diagram
+[image](https://user-images.githubusercontent.com/48529086/159467057-83f5029f-cc2e-40dd-9aaa-b86a52ebdf87.png)
