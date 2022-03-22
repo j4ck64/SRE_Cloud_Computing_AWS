@@ -69,3 +69,29 @@ Stores file.pem (in .ssh folder) to access public cloud
 -- Virtual machine similar to hardware - requires specific components!
 AWS Diagram
 [image](https://user-images.githubusercontent.com/48529086/159467057-83f5029f-cc2e-40dd-9aaa-b86a52ebdf87.png)
+- Creating of an EC2 Instance
+- Login and access to AWS services
+- Choose AMI (ubuntu 18.0.4)
+- Choose EC2 Instance Types (default bc cheap lol)
+- Configure Instance Details
+- Subnet choose "default a"
+- Add storage
+- Tag instance (for me it's 105_sre_jack_{purpose})
+- Configure security groups
+- SSH on My Ip (port 22)
+- HTTP on anywhere (port 80)
+- HTTPS ONLY if you have ssl certificate
+-Review instances
+- Select key name
+Launch :D
+___________________
+## In a terminal window (preferably gitbash) follow steps from AWS:
+
+- The link should look like this:
+
+- ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
+
+- Once connected update all the required services via sudo apt-get update -y and sudo apt-get upgrade -y commands. Then install via sudo apt-get install {name} -y
+
+- Example: after installing nginx with a sudo apt-get install nginx -y command your output from the website should look like this: picture
+
