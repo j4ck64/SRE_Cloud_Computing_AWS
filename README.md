@@ -46,3 +46,24 @@
 
 ## CDN - Content Delivery Network
 - A content delivery network (CDN) refers to a geographically distributed group of servers which work together to provide fast delivery of Internet content. A CDN allows for the quick transfer of assets needed for loading Internet content including HTML pages, javascript files, stylesheets, images, and videos
+
+
+## ON-PREM vs HYBRID
+- Hybrid cloud refers to a mix of on-prem storage, private cloud services and public cloud services such as AWS.
+
+## ON-PREM vs PUBLIC CLOUD
+On-prem is more secure and reliable but reliant on physical maintenance
+Public cloud removes responsibility and pressure of maintenance, it is also easily scalable.
+
+## Connection between local host and public cloud (AWS)
+Requires permissions through roles, ports and keys
+# Local Host
+local machine, desktop pc, laptop
+Stores file.pem (in .ssh folder) to access public cloud
+# Public Cloud
+- AWS
+- Needs to be secure
+-- Creates aws file.pem as SSH key
+-- Important, key is not shared with non-authorised parties
+- We need to create a virtual machine on the cloud - ec2 (elastic compute service)
+-- Virtual machine similar to hardware - requires specific components
