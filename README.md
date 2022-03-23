@@ -94,4 +94,41 @@ ___________________
 - Once connected update all the required services via sudo apt-get update -y and sudo apt-get upgrade -y commands. Then install via sudo apt-get install {name} -y
 
 - Example: after installing nginx with a sudo apt-get install nginx -y command your output from the website should look like this: picture
+--------
+select ami image 
+select launch instance
 
+enable the subnet
+and the ip
+
+slect the instance 
+
+If you have a dynamic ip address you cannot use ROOT 
+instead use Ubuntu
+ ssh -i "105.pem" ubuntu@ec2-34-247-195-55.eu-west-1.compute.amazonaws.com
+
+###Linux commands
+- check the status of a service`systemctl status nginx`
+- How to start a service `sudo systemctl start nginx`
+- How to stop a service `sudo systemctl stop nginx`
+- How to enable a service `sudo systemctl stop name_service`
+- How to install a package `sudo apt install package_name -y`
+- How to remove a package `sudo apt remove package_name -y`
+- how to check all processes `top`
+- who am i `uname -a`
+- where am i `pwd`
+- create a dir`mkdir_name`
+- How to check `ls` or `ls -a`
+- How to create a file `touch name_file` or `nano file_name`
+- How to check content of the file without going inside the file `cat file_name`
+
+- how to move a file 
+mv /home/jack/testfile /home/jack/testfile2
+
+or, if you’re already within /home/jack:
+
+mv testfile testfile2
+
+DANGER
+using `sudo su` is the root user
+it is not best practice
