@@ -129,6 +129,11 @@ or, if you’re already within /home/jack:
 
 mv testfile testfile2
 
+- how to delete folder sudo `rm -rf folder_name`
+
+### File permissions 
+- How to check a file permission `ll`
+- Change file permission `chmod required_permission file_name`
 DANGER
 using `sudo su` is the root user
 it is not best practice
