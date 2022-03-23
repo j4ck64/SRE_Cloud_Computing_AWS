@@ -91,7 +91,7 @@ ___________________
 
 - ssh -i /path/my-key-pair.pem my-instance-user-name@my-instance-public-dns-name
 
-- Once connected update all the required services via sudo apt-get update -y and sudo apt-get upgrade -y commands. Then install via sudo apt-get install {name} -y
+- Once connected update all the required services via `sudo apt-get update -y` and `sudo apt-get upgrade -y` commands. Then install via `sudo apt-get install {name} -y`
 
 - Example: after installing nginx with a sudo apt-get install nginx -y command your output from the website should look like this: picture
 --------
@@ -134,6 +134,31 @@ mv testfile testfile2
 ### File permissions 
 - How to check a file permission `ll`
 - Change file permission `chmod required_permission file_name`
-DANGER
+# DANGER
 using `sudo su` is the root user
 it is not best practice
+
+### Bash scripting  -Automate process with script
+- code block 
+``` bash
+Provision.sh script:
+#!/bin/bash
+
+# run update
+sudo apt-get update -y
+
+# run upgrades
+sudo apt-get upgrade -y
+
+# install nginx
+sudo apt-get install nginx -y
+
+# ensure it's running - start nginx
+sudo systemctl start nginx
+
+# enable nginx
+sudo systemctl enable nginx
+```
+
+- change the file to exe `chmod +x provision.sh`
+- How to tun an exe file `./provision.sh`
