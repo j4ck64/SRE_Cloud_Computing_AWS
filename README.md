@@ -234,3 +234,30 @@ kill <processID>
 used to manage micro services 
 A monolithic architecture is the traditional unified model for the design of a software program. Monolithic, in this context, means composed all in one piece. According to the Cambridge dictionary, the adjective monolithic also means both too large and unable to be changed.
 - self contained 
+---
+### Business and production
+# SDLC – software development life cycle
+- It’s the process of end to end product development.
+- Products need to follow a certain life cycle.
+The Stages are:
+- Planning
+Just an idea, only in someone’s head
+- Designing
+Writing out how the product will look and what it needs.
+- Development
+Develop an environment that works for all of us. i.e the linux instance we created
+Implementing the design.
+•    Testing
+Nothing goes to production without testing.
+The test must pass in order to go to the next stage.
+Beta versions can happen after testing to get feedback from the user.
+•    Staging
+It’s the holding area before the code gets deployed. The program is packaged and ready, just on hold till the release date. After staging the code is deployed.
+
+
+
+Github
+-    One person reviewing is always the best.
+-    Someone who is more knowledgeable should merge.
+-    Git enter will tell you all the commands that can be performed on git
+-    If you delete the .git file you need to reconnect to the github remote before pushing the code back to github.
