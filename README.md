@@ -141,7 +141,7 @@ it is not best practice
 ### Bash scripting  -Automate process with script
 - code block 
 ``` bash
-Provision.sh script:
+## Provision.sh script:
 #!/bin/bash
 
 # run update
@@ -162,3 +162,75 @@ sudo systemctl enable nginx
 
 - change the file to exe `chmod +x provision.sh`
 - How to tun an exe file `./provision.sh`
+----
+Apache Tomcat (called "Tomcat" for short) is a free and open-source implementation of the Jakarta Servlet, Jakarta Expression Language, and WebSocket technologies. Tomcat provides a "pure Java" HTTP web server environment in which Java code can run.
+
+# Remember that:
+
+- Tomcat runs on port 8080 so enable inbound for this port
+- Tomcat may interfere with other web container services so be wary which services you want to run on which ports
+## Tomcat9 Script
+#get updates
+sudo apt-get update -y
+#get upgrades
+sudo apt-get upgrade -y
+#install tomcat9
+sudo apt-get install tomcat9 -y
+#start tomcat9
+sudo systemctl start tomcat9
+#enable tomcat9
+sudo systemctl enable tomcat9
+#check if running - optional, remember to ctrl+c to exit
+sudo systemctl status tomcat9
+---
+## Technical interview questions
+--- 
+# What is a VPC
+- Virtual Private Coud
+Simplified Definition:
+-A private sub-section of AWS that you control, in which you can place AWS resources (such as EC2 instances and databases). You have FULL control over who has access to the AWS resources that you place inside your VPC.
+- A virtual network dedicated to your account on the Service
+- Private instance that is Secure and Isolated within a Public cloud
+- Store Data
+- Run Code
+-Host Websites
+# What is an Internet gateway
+- A Horizontally scaled, redundant and highly available VPC component
+-Allows Communicatins between your VPC and the Internet
+- Enables the resources like EC2 Instances to connect to the internet if they have a public IPV4 or 6 Address
+- Provide a target in your VPC Route tables for traffic routing
+-Perform Network Address Trans lation for instances with Public IPV4 Addresses
+# What is route tables
+- A set of rules cal led rooutes that determine where network traffic from your subnet or Gateway is directed
+- local route for communication within the VPC
+# What is a subnet
+- A range of IP Addresses in your VPC
+- Dividing the Network into two or more networks
+- Public and Private Subnets exist
+# What is NACLS
+- Network Access Control List
+- Optional Security Layer
+- Acts as Firewall for controlling traffic in and out of one more subnets
+# What is a Security Group
+- A Virtual Firewall that controls Traffic
+- Decides what traffic leaves and reaches the resources it is associated with
+- Such as Our EC2 Instance where our security group we needed to add 8080 to the Ports in order to access TomCar
+# How did you secure your app on the public cloud
+- By using Security Groups and allowing only ports we know that are Safen and Frequently Used
+Such as acessing TomCat a safe port we allow only 8080 to leave and reach the instance
+- Doing this, we restrict whether traffic can enter or leave the instace thereby securing
+# What are the outbound rules for security Group by default? and why?
+- Default is Al inbound traffic from resources that are assigned to the same security Group
+- Allows all outbound IpV4 Traffic
+- Allows all Outbound IPV6 Traffic if VPC has an associated IPv6 Block
+# What is the command to kill a process in Linux?
+kill <processID>
+
+# if unresponsive 
+
+`kill -9 <processID>`
+
+### Monolith  architecture
+used to manage micro services 
+A monolithic architecture is the traditional unified model for the design of a software program. Monolithic, in this context, means composed all in one piece. According to the Cambridge dictionary, the adjective monolithic also means both too large and unable to be changed.
+- self contained 
