@@ -261,3 +261,47 @@ Github
 -    Someone who is more knowledgeable should merge.
 -    Git enter will tell you all the commands that can be performed on git
 -    If you delete the .git file you need to reconnect to the github remote before pushing the code back to github.
+
+
+update
+ sudo apt install python3
+  sudo apt install python3-pip
+
+  check version  `python  --version`
+  it should show 2.7.17
+
+
+  set python alias
+  `alias python=python3`
+  run the cammand aggain `python  --version`
+  the output should be 3.6.9
+
+  update `sudo apt update`and upgrade `sudo apt update` again
+
+  install awscli `python3 -m pip install awscli`
+  
+  run the command `aws configure`
+run  `sudo apt install awscli`
+  run the command `aws configure` again
+  input the keys:
+  - Access key
+  - Secret key
+  set default region `eu-west-1` 
+  and the output:`json`
+
+to check everything is working run `aws s3 ls`
+
+`aws s3 mb s3://105-sre-name` (how to make a bucket)
+
+make a txt file
+touch test.txt
+run the command to copy the file to the s3 bucket
+`aws s3 cp test.txt s3://105-sre-jack`
+
+remove the file from te ec2 `rm test.txt`
+
+download the file from the s3 bucket `aws s3 cp s3://105-sre-jack/test.txt test.txt`
+
+remove the file from the bucket `aws s3 rm s3://105-sre-jack/test.txt`
+
+delete the s3 bucket `aws s3 rb s3://105-sre-jack/`
